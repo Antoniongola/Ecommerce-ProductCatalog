@@ -21,7 +21,7 @@ public class ProductService implements ProductServiceInterface{
 
     @Override
     public List<Product> getAllProducts() {
-        return null;
+        return this.productRepository.findAll();
     }
 
     @Override
