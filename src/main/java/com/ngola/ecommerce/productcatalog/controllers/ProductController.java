@@ -39,7 +39,7 @@ public class ProductController {
         return this.productService.updateProduct(productId, product);
     }
 
-    @PostMapping
+    @PostMapping("/products/search")
     public List<Product> searchProduct(String productName){
         return this.productService.findProductByName(productName);
     }

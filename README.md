@@ -1,5 +1,6 @@
 # Ecommerce-ProductCatalog
 Independent Api for an Ecommerce product catalog.
+
 - For listing all products use the following endpoint:
 localhost:8080/api/products/all
 
@@ -14,3 +15,6 @@ localhost:8080/api/products/{productId}/update
 
 - For deleting an existent product use the following endpoint:
 localhost:8080/api/products/{productId}/delete
+
+- For searching an existent product use the following endpoint:
+localhost:8080/api/products/search
