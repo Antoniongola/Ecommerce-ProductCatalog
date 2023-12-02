@@ -10,4 +10,5 @@ public interface ProductServiceInterface {
     public boolean addProduct(Product product);
     public boolean updateProduct(long id, Product product);
     public boolean deleteProduct(long id);
+    public List<Product> findProductByName(String productName);
 }

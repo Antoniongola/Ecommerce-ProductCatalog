@@ -50,4 +50,8 @@ public class ProductService implements ProductServiceInterface{
         }
         return false;
     }
+
+    public List<Product> findByNameContains(String productName){
+        return this.productRepository.findByNameContains(productName);
+    }
 }
