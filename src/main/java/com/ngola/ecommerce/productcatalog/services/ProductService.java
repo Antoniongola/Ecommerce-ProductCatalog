@@ -51,7 +51,8 @@ public class ProductService implements ProductServiceInterface{
         return false;
     }
 
-    public List<Product> findByNameContains(String productName){
-        return this.productRepository.findByNameContains(productName);
+    @Override
+    public List<Product> findProductByName(String productName) {
+        return this.productRepository.findByNameContainingIgnoreCase(productName);
     }
 }

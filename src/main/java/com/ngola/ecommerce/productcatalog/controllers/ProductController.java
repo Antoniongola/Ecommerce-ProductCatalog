@@ -1,5 +1,6 @@
 package com.ngola.ecommerce.productcatalog.controllers;
 
+import com.ngola.ecommerce.productcatalog.DTOs.SearchDTO;
 import com.ngola.ecommerce.productcatalog.entities.Product;
 import com.ngola.ecommerce.productcatalog.services.ProductService;
 import com.ngola.ecommerce.productcatalog.services.ProductServiceInterface;
@@ -40,8 +41,7 @@ public class ProductController {
     }
 
     @PostMapping("/products/search")
-    public List<Product> searchProduct(String productName){
-        return this.productService.findProductByName(productName);
+    public List<Product> searchProduct(@RequestBody SearchDTO pesquisa){
+        return this.productService.findProductByName(pesquisa.productName());
     }
-
 }
